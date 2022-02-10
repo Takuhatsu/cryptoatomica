@@ -13257,14 +13257,8 @@ video {
       }
     }
 
-    .fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 ForkAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+    .yt-container {display: flex; width: 100%; height: 100%; flex-direction: column; overflow: hidden;}
+.playingnow { flex-grow: 1; border: none; margin: 0; padding: 0; }
   </style>
 </head>
 
@@ -13340,11 +13334,9 @@ video {
                     </div>
                     <div class="my-lg-auto col-lg-4 col-12 offset-lg-1">
                       <div class="common-container">
-                        <div class="row">
-                          <iframe width="344" height="190" src="https://www.youtube.com/embed/xa5Cg1Y3o_4" 
-                          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="yt-container">
+                          <iframe src="https://www.youtube.com/embed/xa5Cg1Y3o_4" class="playingnow"></iframe>
                         </div>
-
                       </div>
                     </div>
                   </div>
