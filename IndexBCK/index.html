@@ -20,6 +20,36 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
     integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
   <script defer="defer" src="js/mdb.min.js" type="text/javascript"></script>
+  
+ 
+ <script>
+            
+    var elements = document.getElementsByClassName("hover-mobile");
+    for(var i = 0; i < elements.length; i++)
+    {
+        elements[i].onclick = function(){
+            
+            // remove class from sibling
+            
+            var el = elements[0];
+            while(el)
+            {
+                if(el.tagName === "DIV"){
+                    //remove class
+                    el.classList.remove("bak");
+                    
+                }
+                // pass to the new sibling
+                el = el.nextSibling;
+            }
+            
+          this.classList.add("bak");  
+        };
+    }
+    
+</script> 
+
+
   <style type="text/css"></style>
   <style>
 
@@ -255,7 +285,7 @@ video {
       text-align: center
     }
 
-    .buy-ape-title {
+    .buy-atomica-title {
       font-size: 1.5em;
       font-weight: 800;
       font-style: italic
@@ -1718,12 +1748,7 @@ video {
     .common-container {
       max-width: 1200px;
       margin-left: auto;
-      margin-right: auto
-    }
-    .yt-container {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto
+      margin-right: auto;
     }
 
     .common-hero {
@@ -13252,14 +13277,18 @@ video {
       }
     }
 
-    .yt-container {display: flex; width: 100%; height: 100%; flex-direction: column; overflow: hidden;}
-.playingnow { 
-  flex-grow: 1; 
-  border: none;
-  margin-left: auto;
+    .yt-container {
+      display: flex; 
+      width: 100%; 
+      height: 100%; 
+      flex-direction: column; 
+      overflow: hidden;
+      margin-left: auto;
       margin-right: auto;
-  margin: 0; 
-  padding: 0; }
+      max-width: 1200px;
+
+    }
+      .playingnow { flex-grow: 1; border: none; margin: 0; padding: 0; }
   </style>
 </head>
 
@@ -13275,7 +13304,7 @@ video {
           aria-controls="responsive-navbar-nav" id="nav-toggle" type="button" aria-label="Toggle navigation"
           class="navbar-dark navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button>
         <div class="navbar-collapse collapse">
-          <div class="navbar-nav" id="nav-bar"><a id="nav-link" title="BUY AN APE" href="#buy-an-atomica"
+          <div class="navbar-nav" id="nav-bar"><a id="nav-link" title="BUY AN ATOMICA" href="#buy-an-atomica"
               class="nav-link">BUY AN ATOMICA</a><a id="nav-link" title="ROADMAP" href="#roadmap"
               class="nav-link">ROADMAP</a><a id="nav-link" title="TEAM" href="#team" class="nav-link">TEAM</a>
 
@@ -13326,7 +13355,7 @@ video {
                     </div>
                   </div>
                   <div class="mb-0 row">
-                    <div class="mb-0 col-lg-7 col-12">
+                    <div class="mb-5 col-lg-7 col-12">
                       <h1 class="fair-title d-flex font-italic welcome-title mb-3">SUPPORTED BY TOP QUALITY ANIMATION</h1>
                       <p class="common-p mb-0">Sup3r Drop team have 10+ years of experience in creating animated video content for YouTube, Disney, The New Yorker, Machinima and many others. Our team creates dazzling, fun and engaging animations on very different topics. Each animation that was released from Sup3r Drop generated from 150k to 25m views on YT.
                         Now we’re focused on creating animated content to support the Crypto Atomica collection.
@@ -13334,12 +13363,12 @@ video {
                         
                         </p>
                     </div>
-                    <div class="my-lg-auto col-lg-4 col-12 offset-lg-1">
-                      <div class="common-container">
+
+                    <div class="my-lg-0 col-lg-4 col-12 offset-lg-1">
                         <div class="yt-container">
-                          <iframe src="https://www.youtube.com/embed/xa5Cg1Y3o_4" class="playingnow"></iframe>
+                          <iframe width="344" height="344" src="https://www.youtube.com/embed/xa5Cg1Y3o_4" class="playingnow w-100"></iframe>
                         </div>
-                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -13349,7 +13378,7 @@ video {
                   <div id="buy-an-atomica" class="buy-token-container">
                     <div class="bayc-bg p-4 m-auto row">
                       <div class="m-auto col-lg-3 col-12">
-                        <h3 class="buy-ape-title">BUY AN ATOMICA</h3>
+                        <h3 class="buy-atomica-title">BUY AN ATOMICA</h3>
                       </div>
                       <div class="m-auto col-lg-4 col-12 offset-lg-1">
                         <p class="common-p mb-lg-0">Please watch our <a href="#buy-an-atomica">“How to Mint”</a> video.</p>
@@ -13582,11 +13611,6 @@ video {
       </footer>
     </div>
   </div>
-  <script defer=""
-    src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
-    integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
-    data-cf-beacon="{&quot;rayId&quot;:&quot;6dad67191bc892b7&quot;,&quot;token&quot;:&quot;72d9ad35d2b14639a4f460f29c57ec15&quot;,&quot;version&quot;:&quot;2021.12.0&quot;,&quot;si&quot;:100}"
-    crossorigin="anonymous"></script>
 </body>
 
 <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
