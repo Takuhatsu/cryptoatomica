@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <title>Mint now</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="theme-color" content="#000000">
+  <meta name="description"
+    content="The CRYPTO ATOMICA is an NFT collection consisting of 5,000 unique digital collectibles stored on the Ethereum blockchain with a Hold-To-Earn feature. 
+    Every 3 months, 500 random Atomica Boy holders' wallets will be selected to receive 50% from Crypto Atomica secondary market sales.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Crypto Atomica">
+  <meta name="twitter:description"
+    content="NFT collection consisting of 5,000 unique digital collectibles stored on the Ethereum blockchain with a Hold-To-Earn feature.">
+  <meta name="twitter:image" content="https://cryptoatomica.com/images/casstmbnl.png">
+  <meta property="og:title" content="CRYPTO ATOMICA" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://cryptoatomica.com">
+  <meta property="og:image:url" content="https://cryptoatomica.com/images/caog.png">
+  <meta property="og:description"
+    content="NFT collection consisting of 10,000 unique digital collectibles stored on the Ethereum blockchain with a Hold-To-Earn feature.">
+  <link rel="icon" href="/images/caico.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+    integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+
+
+</head>
+<style>
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+</style>
+<video src="/videos/Backgound.mp4" style="opacity: 35%;" autoplay loop playsinline muted></video>
+
+<body style="background-color: #000;">
+
+
+  <div id="intro" class=" text-center" style="height: 100vh;">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white px-4">
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <div class="card bg-black">
+              <div class="card-body">
+                <img src="/images/SP_8.png" class="w-100">
+                <br><br>
+                <div class="row">
+                  <div class="col">
+                    <p>Mint price : 0.08 ETH<br>
+                      Max per wallet is 3
+                    </p>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-outline-warning" id="connect-button" onclick="connect();">Connect</button>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col d-none" id="iButton">
+                    <button class="btn btn-outline-light" data-mdb-toggle="modal" data-mdb-target="#ishidaMint">Free
+                      mint</button>
+                  </div>
+                  <div class="col d-none" id="prButton">
+                    <button class="btn btn-outline-info" data-mdb-toggle="modal" data-mdb-target="#privateMint">Private
+                      mint</button>
+                  </div>
+                  <div class="col d-none" id="puButton">
+                    <button class="btn btn-outline-success" data-mdb-toggle="modal" data-mdb-target="#normalMint">Public
+                      mint</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade text-white" id="normalMint" tabindex="-1" aria-labelledby="buylabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title text-white" id="exampleModalLabel">Mint now</h5>
+          <button type="button" class="btn-close btn-white " data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row m-0 d-flex justify-content-center mb-3">
+            <div class="col text-center">
+              <h6>Choose how many tokens u want to mint</h6>
+              <br>
+              <div class="row">
+                <div class="col-8">
+                  <div class="form-outline">
+                    <input type="number" class="form-control text-white" value="5"
+                      id="publicMintQuantity" />
+                    <label class="form-label text-white" for="publicMintQuantity">Quantity</label>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <button type="button" class="btn btn-primary"onclick="publicMint();">Mint</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade text-white" id="ishidaMint" tabindex="-1" aria-labelledby="buylabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title text-white" id="exampleModalLabel">Mint now</h5>
+          <button type="button" class="btn-close btn-white " data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row m-0 d-flex justify-content-center mb-3">
+            <div class="col text-center">
+              <h6>Choose the ishida token id you have</h6>
+              <div class="row">
+                <div class="col-8">
+                  <div class="form-outline">
+                    <input type="text" class="form-control text-white" id="ishidaMintTokenId" />
+                    <label class="form-label text-white" for="ishidaMintTokenId">Token id</label>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <button type="button" class="btn btn-primary" onclick="freeMint();">Free mint</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade text-white" id="privateMint" tabindex="-1" aria-labelledby="buylabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title text-white" id="exampleModalLabel">Mint now</h5>
+          <button type="button" class="btn-close btn-white " data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row m-0 d-flex justify-content-center mb-3">
+            <div class="col text-center">
+              <h6>Choose how many tokens u want to mint</h6>
+              <div class="btn-group align-self-center" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary" onclick="privateMint(1);">1 token</button>
+                <button type="button" class="btn btn-primary" onclick="privateMint(2);">2 tokens</button>
+                <button type="button" class="btn btn-primary" onclick="privateMint(3);">3 tokens</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js"
+  integrity="sha512-Ws+qbaGHSFw2Zc1e7XRpvW+kySrhmPLFYTyQ95mxAkss0sshj6ObdNP3HDWcwTs8zBJ60KpynKZywk0R8tG1GA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="./js/web3modal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+  integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+
+</html>
